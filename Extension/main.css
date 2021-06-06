@@ -1,0 +1,258 @@
+.tipinfo {
+    position: relative;
+    display: inline-block;
+  }
+  
+.tipinfo .tiptextinfo {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: -5px;
+    right: 105%;
+    margin-left: -60px;
+    z-index: 1;
+  }
+  
+.tipinfo:hover .tiptextinfo {
+    visibility: visible;
+  }
+
+#credentials{
+    margin-left: 45px;
+    margin-top: 40px;
+}
+
+
+#credentials #loginPass{
+    margin-top: 10px;
+    
+}
+
+#credentials #btns{
+    margin-top: 20px;
+}
+
+
+#credentials #btns #btnLog{
+    border-radius: 0px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(71, 236, 79);
+    height:40px;
+    width: 85px;
+    text-align: center;
+}
+
+#credentials #btns #btnCreateAccount{
+    margin-left: 16px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    width: max-content;
+    height: 40px;
+}
+
+#credentials #btns #btnLog:active{
+    opacity: 0.7;
+}
+
+#credentials #btns #btnCreateAccount:active{
+    opacity: 0.7;
+}
+.header {
+    border-bottom: solid black 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.passMngr{
+    margin-top: 10px;
+    font-size: 1.25rem;
+}
+
+#userRegister{
+    margin-left: 45px;
+    margin-top: -160px;
+}
+
+
+#userRegister #registerPassword {
+    margin-top: 10px; 
+}
+#userRegister #registerPasswordConfirm {
+    margin-top: 10px; 
+}
+
+#userRegister #btns{
+    margin-top: 9px;
+}
+
+#userRegister #btns #btnRegister{
+    margin-left: 0px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    width: max-content;
+    height: 40px;
+}
+
+#userRegister #btns #cancel{
+    margin-left: 16px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(230, 59, 59);
+    justify-content: center;
+    height: 40px;
+    width: 87px;
+}
+
+#userRegister #btns #btnRegister:active{
+    opacity: 0.7;
+}
+
+#userRegister #btns #cancel:active{
+    opacity: 0.7;
+}
+.active{
+    visibility: visible;
+}
+
+.inactive{
+    visibility:hidden;
+}
+
+#logged-email{
+    margin-top: -30px;
+    margin-left: 40px;
+    font-size: large;
+}
+
+#logoutBtn{
+    margin-top: 30px;
+    margin-left: 120px;
+    color: white;
+    cursor: pointer;
+    border-radius: 0px;
+    height:40px;
+    width: 65px;
+    background-color: rgb(172, 59, 49);
+    border:none;
+}
+
+#logoutBtn:active{
+    opacity: 0.7;
+}
+
+#deleteAccountBtn{
+    color: rgb(9, 50, 126);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#deleteAccountBtn:active{
+    color: tomato;
+    text-decoration: underline;
+}
+
+
+#currentWebsite{
+    border: none;
+    width: 300px;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+}
+#container #imgConainer{
+    margin-top: 10px;
+}
+
+.tip {
+    position: relative;
+    display: inline-block;
+  }
+  
+.tip .tiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    z-index: 1;
+  }
+  
+.tip:hover .tiptext {
+    visibility: visible;
+  }
+
+.errorToast{
+    visibility: hidden; 
+  min-width: 150px; 
+  margin-left: 10px;
+  background-color:rgb(141, 48, 40); 
+  color: #fff; 
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px; 
+  position: fixed;
+  z-index: 1; 
+  left: 20%; 
+  bottom: 10px;
+}
+
+.errorToast.show{
+    visibility: visible; 
+    animation: fadein 0.5s;
+}
+
+.successToast{
+    visibility: hidden; 
+  min-width: 150px; 
+  margin-left: 10px;
+  background-color:rgb(33, 219, 16); 
+  color: rgb(0, 0, 0); 
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px; 
+  position: fixed;
+  z-index: 1; 
+  left: 20%; 
+  bottom: 10px;
+}
+
+.successToast.show{
+    visibility: visible; 
+    animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 20px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" />
+    <title>MRPass</title>
+</head>
+<body style="width: 300px; height: 300px;">
+    <div class="header">
+        <img src="./icon64.png" width="64px" height="64px"/>
+        <p id="loggedUser" style="width: 0px; height: 0px; display: none;"></p>
+        <div class="passMngr">Welcome to your <br> <b>Password Manager</b></div>
+        <div class="tipinfo">
+            <input type="button" style="width: 20px; height: 20px;background-color: white; cursor: pointer; border-radius: 10px; font-weight: bold;" id="info" value="i">
+            <span class="tiptextinfo">This is a Password Manager.<br>Here you will store passwords for websites you browse on.
+            <br>Just create an account or log in and only remember one password instead of dozens!</span>
+        </div>
+    </div>
+    <section class="Sign-up" style="display: none;">
+        <div id="credentials" class="active">
+            <div id="errorToastLog" class="errorToast">Invalid Credentials!</div>
+        <form action="login">
+            <div><input type="text" id="loginName" placeholder="Email Address" style="width: 200px; height: 25px" autocomplete="on"></div>
+            <input type="password" id="loginPass" placeholder="Password" style="width: 200px; height: 25px" autocomplete="off">
+            <div id=btns>
+                <input type='button' id="btnLog" value="Log in">
+                <input type="button" id="btnCreateAccount" value="Create Account">
+            </div>
+        </form>
+        </div>
+
+        <div id="userRegister" class="inactive">
+            <div id="errorPasswordsMatch" class="errorToast">Passwords do not match!</div>
+            <div id="errorInvalidEmail" class="errorToast">Invalid email address!</div>
+            <div id="errorServer" class="errorToast">Error with the server! Try again in a few minutes</div>
+            <div id="errorShortPassword" class="errorToast">Your password must have at least 6 characters</div>
+            <form action="register">
+                <div><input type="text" id="registerUsername" placeholder="Email Address" style="width: 200px; height: 25px" autocomplete="on"></div>
+                <input type="password" id="registerPassword" placeholder="Password" style="width: 200px; height: 25px" autocomplete="off">
+                <input type="password" id="registerPasswordConfirm" placeholder="Confirm Password" style="width: 200px; height: 25px" autocomplete="off">
+                <!-- <input type='button' id="btnLog" value="log in"> -->
+                <div id=btns>
+                    <input type="button" id="btnRegister" value="Create Account">
+                    <input type='button' id="cancel" value="Cancel">
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="Logged-in" style="display: none;">
+        <img src="user_icon.png" style="width: 32px; height: 32px;">
+        <div id="logged-email">a</div>
+        <br>
+        <label for="currentWebsite" style="font-weight: bold;">Current Host:</label>
+        <br>
+        <input type="text" id="currentWebsite" value="www.example.com" readonly>
+        <br><br>
+        <div id="container">
+            <div id="passwordContainer">
+                <label for="hiddenPassword"style="font-weight: bold;">Password:</label>
+                <br>
+                <input type="password" id="hiddenPassword"  style="width: fit-content;" readonly>
+            </div>
+            <div id="imgConainer" class="tip">
+                <img src='./clipboard.png' id='clipboardPNG' style="width: 32px; height: 32px; cursor: pointer;">
+                <span class="tiptext">Copy Password to Clipboard</span>
+            </div>
+        </div>
+        <div id='deleteAccountBtn' >Delete account for this website </div>
+        <div id="successDeleteAccount" class="successToast">Account deleted successfully</div>
+        <input type='button' id="logoutBtn" value="Log out">
+    </section>
+
+    <script src='popup.js'></script>
+</body>
+</html>
